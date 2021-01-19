@@ -2,9 +2,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Collections;
 
-public class Class1 {
-    public final String SPECIAL_CHARACTER = "a";
 
+public class Class1 {
+//SPECIAL_CHARACTER is not used anywhere
+    public final String SPECIAL_CHARACTER = "a";
+// Find the words in a String that contain the character "a" and return them in a list of Strings
+    // Does not handle spliting if there are special characters
+    
     public List<String> method(String paragraph) {
         List<String> shortestWords = new ArrayList<>();
         String[] sentences =   paragraph.split(".");
@@ -26,7 +30,7 @@ public class Class1 {
 
         return shortestWords;
     }
-
+// Find the shortest word in a String that contains the character "a"
     public String findShortestWordWithA(String paragraph) {
         List<String> shortestWordsWithA = method(paragraph);
         String shortestWord = shortestWordsWithA.get(0);
@@ -41,7 +45,7 @@ public class Class1 {
         return shortestWord;
     }
 
-
+// Find the shortest word in a String that starts with "a"
     public String findFirstShortWordStartingWithA(String paragraph) {
         List<String> shortestWordsWithA = method(paragraph);
         String firstShortWordStartingWithA = "";
